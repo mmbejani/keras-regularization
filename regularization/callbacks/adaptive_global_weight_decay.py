@@ -1,8 +1,8 @@
-from keras.callbacks import Callback
-from keras.layers import Conv2D, Dense
-from keras.models import Model
-from keras.losses import categorical_crossentropy
-import keras.backend as k
+from tensorflow.keras.callbacks import Callback
+from tensorflow.keras.layers import Conv2D, Dense
+from tensorflow.keras.models import Model
+from tensorflow.keras.losses import categorical_crossentropy
+import tensorflow.keras.backend as k
 import tensorflow as tf
 
 
