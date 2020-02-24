@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="example-pkg-YOUR-USERNAME-HERE",  # Replace with your own username
-    version="0.0.1",
-    author="Example Author",
-    author_email="author@example.com",
-    description="A small example package",
+    name="keras-regularization",
+    version="1.0.0",
+    author="Mohammad Mahdi Bejani",
+    author_email="mbejani@aut.ac.ir",
+    description="regularization",
     long_description=long_description,
-    long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    long_description_content_type="README!",
+    url="https://github.com/mmbejani/keras-regularization/",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
