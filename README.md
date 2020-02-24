@@ -23,7 +23,7 @@ If you propose a new approach or find a suitable regularization scheme, contact 
 
 first download the package with following command:
 ```
-git clone url.git
+git clone https://github.com/mmbejani/keras-regularization
 ```
 then change directory to the target folder and run following command:
 ```
