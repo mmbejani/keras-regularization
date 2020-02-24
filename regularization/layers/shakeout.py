@@ -1,6 +1,6 @@
-from keras.layers import Conv2D, Dense, Lambda
+from tensorflow.keras.layers import Conv2D, Dense, Lambda
 import tensorflow as tf
-import keras.backend as K
+import tensorflow.keras.backend as K
 
 
 class ShakeoutConv2D(Conv2D):
