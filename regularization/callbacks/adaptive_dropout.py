@@ -1,6 +1,6 @@
-from keras.callbacks import Callback
-from keras.models import Model
-from keras.layers import Dropout
+from tensorflow.keras.callbacks import Callback
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dropout
 
 
 class AdaptiveDropout(Callback):
