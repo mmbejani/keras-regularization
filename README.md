@@ -18,6 +18,8 @@ The library has two major regularization categories.
 
 If you propose a new approach or find a suitable regularization scheme, contact with us.
 
+If you work on `Tensorflow 2.x` please use the `tensorflow-2` branch.
+
 ## How to use
 ### Installation
 
