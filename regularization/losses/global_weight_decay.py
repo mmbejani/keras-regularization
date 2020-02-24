@@ -1,8 +1,8 @@
 import tensorflow as tf
 
-from keras.models import Model
-from keras.layers import Conv2D, Dense
-from keras.losses import categorical_crossentropy
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Conv2D, Dense
+from tensorflow.keras.losses import categorical_crossentropy
 
 
 def get_loss_with_weight_decay(model: Model, alpha=1e-2):
