@@ -1,5 +1,5 @@
-from keras.layers import Dense, Layer
-import keras.backend as K
+from tensorflow.keras.layers import Dense, Layer
+import tensorflow.keras.backend as K
 
 
 class DropConnectDense(Dense):
