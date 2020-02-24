@@ -54,7 +54,7 @@ model = Sequential([
 ```
 where `tau` and `c` are the hyper-parameters of the `Shakeout`.
 
-#### Regularization Callbacks
+#### Regularization Callback
 Here, an example of `Adaptive Weight Decay` is given. Assume that you create a CNN model so,
 
 ```
