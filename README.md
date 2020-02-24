@@ -33,7 +33,39 @@ The `--user` command is optional.
 
 ### Okey! let see some examples
 We bring two example of the usage this lib. First, we show how to use the implicit regularization scheme.
-....
+
+#### Regularization Layer
+Each class of layers have two sub-type `Dense Layer` and `Conv Layer`. Create a simple CNN model where instead of Convoutional and Dense layers, we use `Shakeout` layers.
+
+```
+from keras.models import Sequential
+from keras.layers import Flatten
+
+from regularization.layers.shakeout import ShakeoutConv2D, ShakeoutDense
+
+model = Sequential([
+    ShakeoutConv2D(tau=0.1, c=0.1, filters=32, kernel_size=3, strides=(2, 2), padding='same'),
+    ShakeoutConv2D(tau=0.1, c=0.1, filters=64, kernel_size=3, strides=(2, 2), padding='same'),
+    Flatten(),
+    ShakeoutDense(tau=0.1, c=0.1, units=10, activation='softmax')
+])
+
+# The training and test phases
+```
+where `tau` and `c` are the hyper-parameters of the `Shakeout`.
+
+#### Regularization Callbacks
+Here, an example of `Adaptive Weight Decay` is given. Assume that you create a CNN model so,
+
+```
+# Create model named 'model'
+from regularization.callbacks.adaptive_global_weight_decay import AdaptiveWeightDecay
+
+reg = AdaptiveWeightDecay(model)
+
+model.compile(Adam(), reg.get_loss_function(), metrics=['accuracy'])
+model.fit(train_x, train_y, epochs=100, batch_size=256, validation_data=(val_x, val_y), callbacks=[reg])
+```
 
 # References
 [1] Bejani, M.M. and Ghatee, M., 2019. Convolutional neural network with adaptive regularization to classify driving styles on smartphones. IEEE Transactions on Intelligent Transportation Systems.
